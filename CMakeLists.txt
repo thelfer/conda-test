@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(conda-test)
 
-set(CMAKE_CXX_FLAGS "")
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS}")
 
 find_package(PythonLibs REQUIRED)
 message(STATUS "found python          ${PYTHONLIBS_VERSION_STRING}")
