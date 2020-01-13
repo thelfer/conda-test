@@ -1,0 +1,22 @@
+package:
+  name: "conda-test"
+  version:  "0.1"
+
+source:
+  git_url: https://github.com/thelfer/conda-test
+  git_rev: master
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+    - git
+    - cmake
+    - python
+    - py-boost
+  run:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - python
+    - py-boost
