@@ -5,6 +5,8 @@ find_package(PythonLibs REQUIRED)
 message(STATUS "found python          ${PYTHONLIBS_VERSION_STRING}")
 message(STATUS "python include path   ${PYTHON_INCLUDE_DIRS}")
 
+set(CXXFLAGS "")
+
 string(REGEX REPLACE "[a-z]+.*$" "" PYTHONLIBS_VERSION_CLEANED ${PYTHONLIBS_VERSION_STRING})
 find_package(PythonInterp ${PYTHONLIBS_VERSION_CLEANED} REQUIRED)
 find_package(Boost 1.36.0 COMPONENTS "python")
