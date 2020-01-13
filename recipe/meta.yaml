@@ -13,6 +13,7 @@ requirements:
     - {{ compiler('fortran') }}
     - git
     - cmake
+  host:
     - python
     - py-boost
   run:
